@@ -16,7 +16,13 @@ const NavbarComponent = () => {
           menu
         </button>
         {/* head */}
-        <img src={logoThreebond} alt="logo-threebond" className="max-w-32 lg:max-w-36" />
+        <Link to={'/'} className="cursor-pointer">
+          <img
+            src={logoThreebond}
+            alt="logo-threebond"
+            className="max-w-32 lg:max-w-36"
+          />
+        </Link>
         <div className="flex items-center gap-8">
           <h1 className="hidden cursor-pointer capitalize text-sm font-light text-slate-700 lg:block lg:text-base hover:text-black duration-75">
             search

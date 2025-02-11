@@ -1,13 +1,13 @@
-import NavbarComponent from "../../../components/NavbarComponent/NavbarComponent";
+// import NavbarComponent from "../../../components/NavbarComponent/NavbarComponent";
+// import FooterComponent from "../../../components/FooterComponent/FooterComponent";
 import MainSectionComponent from "../../../components/HomeComponent/MainSectionComponent";
 import ProductComponent from "../../../components/HomeComponent/ProductComponent";
 import ContactComponent from "../../../components/HomeComponent/ContactComponent";
-import FooterComponent from "../../../components/FooterComponent/FooterComponent";
 
 const HomePage = () => {
   return (
     <>
-      <NavbarComponent />
+      {/* <NavbarComponent /> */}
 
       {/* main section */}
       <MainSectionComponent />
@@ -16,7 +16,7 @@ const HomePage = () => {
       {/* Contact */}
       <ContactComponent />
 
-      <FooterComponent />
+      {/* <FooterComponent /> */}
     </>
   );
 };
