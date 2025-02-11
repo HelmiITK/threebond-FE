@@ -4,6 +4,7 @@ import HomePage from "./pages/UserPage/HomePage/HomePage";
 import LoginPage from "./pages/AuthPage/LoginPage";
 import LayoutLandingPage from "./layout/LayoutLandingPage";
 import RegisterPage from "./pages/AuthPage/RegisterPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
           </Route>
+
+          {/* not found url adress */}
+          <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </BrowserRouter>
     </>
