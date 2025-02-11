@@ -62,16 +62,16 @@ const NavbarComponent = () => {
                 <IoMdClose size={24} />
               </button>
               <ul className="space-y-4 mt-8 lg:mt-24 lg:space-y-8 flex flex-col justify-center items-start">
-                <li className="text-white text-lg font-light lg:text-xl lg:font-normal hover:scale-95 duration-150 ease-in-out cursor-pointer">
+                <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
                   Home
                 </li>
-                <li className="text-white text-lg font-light lg:text-xl lg:font-normal hover:scale-95 duration-150 ease-in-out cursor-pointer">
+                <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
                   Store
                 </li>
-                <li className="text-white text-lg font-light lg:text-xl lg:font-normal hover:scale-95 duration-150 ease-in-out cursor-pointer">
+                <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
                   Search
                 </li>
-                <li className="text-white text-lg font-light lg:text-xl lg:font-normal hover:scale-95 duration-150 ease-in-out cursor-pointer">
+                <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
                   Account
                 </li>
               </ul>

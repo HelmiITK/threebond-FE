@@ -81,7 +81,7 @@ const FooterComponent = () => {
         </div>
       </footer>
       {/* copy right */}
-      <div className="hidden lg:block text-center text-sm py-6 bg-slate-100">
+      <div className="hidden lg:block text-center text-sm py-6 bg-gray-100">
         Copyright© ThreeBond Holdings Co., Ltd. All rights Reserved.
       </div>
     </>
