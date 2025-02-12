@@ -66,10 +66,10 @@ const FooterComponent = () => {
             </h1>
             <div className="w-[1px] h-[20px] bg-black"></div>
             <div className="flex items-center gap-4">
-              <RiTwitterXLine className="w-6 h-6 text-[#0A0A0A]" />
-              <FaInstagram className="w-6 h-6 text-[#DD2A7B]" />
-              <BiLogoFacebookCircle className="w-6 h-6 text-[#0866FF]" />
-              <FaYoutube className="w-6 h-6 text-[#FF0000]" />
+              <RiTwitterXLine className="w-6 h-6 text-[#0A0A0A] cursor-pointer" />
+              <FaInstagram className="w-6 h-6 text-[#DD2A7B] cursor-pointer" />
+              <BiLogoFacebookCircle className="w-6 h-6 text-[#0866FF] cursor-pointer" />
+              <FaYoutube className="w-6 h-6 text-[#FF0000] cursor-pointer" />
             </div>
           </div>
         </div>

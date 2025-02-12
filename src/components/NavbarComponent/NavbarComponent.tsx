@@ -3,39 +3,44 @@ import { Link } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { CiSearch } from "react-icons/ci";
 
 const NavbarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <nav className="sticky top-0 z-50 bg-opacity-55 backdrop-blur-md px-5 py-4 bg-white shadow-md flex justify-between items-center lg:px-10">
-        <button
-          onClick={() => setIsOpen(true)}
-          className="capitalize text-sm font-light text-black lg:text-base lg:text-slate-700 hover:text-black duration-75"
-        >
-          menu
-        </button>
+        <div className="flex items-center lg:w-[11.2%]">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="capitalize text-sm font-light text-black lg:text-base lg:text-slate-700 hover:text-black duration-75"
+          >
+            menu
+          </button>
+          <div className=""></div>
+        </div>
         {/* head */}
-        <Link to={'/'} className="cursor-pointer">
+        <Link to={"/"} className="cursor-pointer">
           <img
             src={logoThreebond}
             alt="logo-threebond"
             className="max-w-32 lg:max-w-36"
           />
         </Link>
+        {/* left nav */}
         <div className="flex items-center gap-8">
-          <h1 className="hidden cursor-pointer capitalize text-sm font-light text-slate-700 lg:block lg:text-base hover:text-black duration-75">
-            search
-          </h1>
-          <Link
-            to={"#"}
-            className="hidden cursor-pointer capitalize text-sm font-light text-slate-700 lg:block lg:text-base hover:text-black duration-75"
-          >
-            account
-          </Link>
+          <div className="hidden lg:flex items-center gap-1 group ">
+            <CiSearch
+              size={20}
+              className="hidden lg:block text-slate-700 group-hover:text-black duration-75"
+            />
+            <h1 className="hidden cursor-pointer capitalize text-sm font-light text-slate-700 lg:block lg:text-base group-hover:text-black duration-75">
+              search
+            </h1>
+          </div>
           <Link
             to={"/login"}
-            className="cursor-pointer capitalize text-sm font-light text-slate-700 lg:text-base hover:text-black duration-75"
+            className="cursor-pointer capitalize text-sm font-light text-black lg:py-1 lg:px-3 lg:bg-primary lg:border lg:border-secondary lg:text-white lg:rounded-sm lg:shadow-sm lg:shadow-gray-400 lg:text-base lg:hover:shadow-md lg:hover:shadow-gray-300 lg:hover:text-primary lg:hover:bg-white lg:hover:border lg:hover:border-secondary duration-150"
           >
             login
           </Link>

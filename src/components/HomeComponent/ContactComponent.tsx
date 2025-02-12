@@ -4,7 +4,7 @@ import { BsTelephone } from "react-icons/bs";
 
 const ContactComponent = () => {
   return (
-    <div className="p-6 bg-primary mt-9 flex flex-col gap-7 lg:mt-14 lg:px-10 lg:py-14 lg:flex lg:flex-row lg:justify-around lg:gap-10">
+    <div className="p-6 bg-primary mt-12 mb-16 flex flex-col gap-7 lg:mt-16 lg:px-10 lg:py-14 lg:flex lg:flex-row lg:justify-around lg:gap-10">
       {/* top */}
       <div className="flex items-center justify-around lg:flex lg:flex-col lg:items-start lg:gap-3 lg:w-1/4">
         <h1 className="capitalize text-2xl font-semibold text-white lg:text-4xl lg:font-extrabold lg:tracking-widest">
