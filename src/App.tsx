@@ -5,6 +5,8 @@ import LoginPage from "./pages/AuthPage/LoginPage";
 import LayoutLandingPage from "./layout/LayoutLandingPage";
 import RegisterPage from "./pages/AuthPage/RegisterPage";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import ProductStorePage from "./pages/UserPage/StoreProductPage/ProductStorePage";
+import DetailProductPage from "./pages/UserPage/StoreProductPage/DetailProductPage";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/product_store" element={<ProductStorePage />} />
+            <Route path="/product_detail" element={<DetailProductPage />} />
           </Route>
 
           {/* not found url adress */}

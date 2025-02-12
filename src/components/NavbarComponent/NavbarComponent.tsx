@@ -1,15 +1,22 @@
 import logoThreebond from "../../assets/Logo_threebond.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoMdClose } from "react-icons/io";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { CiSearch } from "react-icons/ci";
 
-const NavbarComponent = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const NavbarComponent: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+  
   return (
     <>
       <nav className="sticky top-0 z-50 bg-opacity-55 backdrop-blur-md px-5 py-4 bg-white shadow-md flex justify-between items-center lg:px-10">
+        {/* left nav  */}
         <div className="flex items-center lg:w-[11.2%]">
           <button
             onClick={() => setIsOpen(true)}
@@ -27,7 +34,7 @@ const NavbarComponent = () => {
             className="max-w-32 lg:max-w-36"
           />
         </Link>
-        {/* left nav */}
+        {/* right nav */}
         <div className="flex items-center gap-8">
           <div className="hidden lg:flex items-center gap-1 group ">
             <CiSearch
@@ -67,12 +74,28 @@ const NavbarComponent = () => {
                 <IoMdClose size={24} />
               </button>
               <ul className="space-y-4 mt-8 lg:mt-24 lg:space-y-8 flex flex-col justify-center items-start">
-                <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
-                  Home
-                </li>
-                <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
-                  Store
-                </li>
+                <NavLink
+                  to={"/"}
+                  style={({ isActive }) => ({
+                    textDecorationLine: isActive ? "underline" : "",
+                    textUnderlineOffset: isActive ? "4px" : "",
+                  })}
+                >
+                  <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
+                    Home
+                  </li>
+                </NavLink>
+                <NavLink
+                  to={"/product_store"}
+                  style={({ isActive }) => ({
+                    textDecorationLine: isActive ? "underline" : "",
+                    textUnderlineOffset: isActive ? "4px" : "",
+                  })}
+                >
+                  <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
+                    Store
+                  </li>
+                </NavLink>
                 <li className="text-gray-100 text-lg font-light lg:text-xl lg:font-normal hover:text-white hover:scale-95 duration-150 ease-in-out cursor-pointer">
                   Search
                 </li>
